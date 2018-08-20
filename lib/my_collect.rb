@@ -3,7 +3,9 @@ def my_collect(collection)
     i = 0 
     myArr = []
     while i < collection.length
-   myArr << yield(collection[i])
+    if yield(collection[i]) == true 
+      myArr << collection[i]
+    end
     i += 1 
   end
   myArr
